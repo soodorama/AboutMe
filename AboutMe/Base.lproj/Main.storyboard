@@ -65,7 +65,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swift" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAA-YL-OPr">
                                         <rect key="frame" x="0.0" y="42" width="270.5" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <color key="textColor" red="0.94117647058823528" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-Ep-Oj2">
@@ -77,7 +77,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="full-stack web" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x4-mq-MN4">
                                         <rect key="frame" x="0.0" y="138" width="270.5" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <color key="textColor" red="1" green="0.89600278253424659" blue="0.14096263933655656" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="0.89600278249999998" blue="0.1409626393" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="developer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCc-JD-ahc">
@@ -264,6 +264,12 @@
                         <viewLayoutGuide key="safeArea" id="iWk-1k-FKv"/>
                     </view>
                     <connections>
+                        <outlet property="bottomArrowImageView" destination="PAb-Ai-E72" id="vYY-u2-0pG"/>
+                        <outlet property="bottomLabel" destination="3ib-6m-Jew" id="br2-cb-IWp"/>
+                        <outlet property="leftArrowImageView" destination="vtv-Qo-aEu" id="RP5-vO-wtR"/>
+                        <outlet property="logoImageView" destination="10n-CZ-2rU" id="q1U-7x-fUY"/>
+                        <outlet property="rightArrowImageView" destination="quK-7j-t6S" id="czQ-XE-AnC"/>
+                        <outlet property="topLabel" destination="pdF-pu-F5Z" id="haT-x0-8mp"/>
                         <segue destination="4dz-Cd-0Tc" kind="show" identifier="ToPlanning2GoSegue" id="QIF-pr-TL6"/>
                     </connections>
                 </viewController>
@@ -274,7 +280,7 @@
         <!--Planning2GoVC-->
         <scene sceneID="Ar1-Rg-mvQ">
             <objects>
-                <viewController id="4dz-Cd-0Tc" userLabel="Planning2GoVC" customClass="Planning2GoVC" sceneMemberID="viewController">
+                <viewController id="4dz-Cd-0Tc" userLabel="Planning2GoVC" customClass="Planning2GoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="88c-uP-kT5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,8 +602,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lkc-cB-FsV"/>
                     </view>
+                    <connections>
+                        <segue destination="qox-0g-Fhw" kind="unwind" identifier="unwindToMainVCSegue" unwindAction="unwindToMainVCWithSegue:" id="hJY-rI-d5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNe-c5-8mJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qox-0g-Fhw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4117" y="113"/>
         </scene>
