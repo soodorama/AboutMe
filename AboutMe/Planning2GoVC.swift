@@ -9,44 +9,54 @@
 import UIKit
 
 class Planning2GoVC: UIViewController {
-
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    let imageWidth = CGFloat(256)
+    let imageHeight = CGFloat(256)
+    let screenSize = UIScreen.main.bounds
+    let edgeSpacing = CGFloat(48)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeUp.direction = .up
-        self.view.addGestureRecognizer(swipeUp)
-        
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeDown.direction = .down
-        self.view.addGestureRecognizer(swipeDown)
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if let touch = touches.first {
+//            let position = touch.location(in: view)
+//            let screenWidth = screenSize.width
+//            let screenHeight = screenSize.height
+//
+//            if position.x > edgeSpacing && position.x < screenWidth - edgeSpacing - imageWidth && position.y < screenHeight - edgeSpacing - imageHeight {
+//                print("cannot move there")
+//            }
+//            else {
+//                logoImageView.frame.origin.x = position.x - imageWidth / 2
+//                logoImageView.frame.origin.y = position.y - imageHeight / 2
+//            }
+//        }
+//    }
     
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
-        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            print("Swipe Right")
-            dismiss(animated: true, completion: nil)
-        }
-        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            print("Swipe Left")
-            performSegue(withIdentifier: "ToCodingDojoSegue", sender: self)
-        }
-        else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
-            print("Swipe Up")
-        }
-        else if gesture.direction == UISwipeGestureRecognizer.Direction.down {
-            print("Swipe Down")
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let position = touch.location(in: view)
+            let screenWidth = screenSize.width
+            let screenHeight = screenSize.height
+//            print(screenHeight)
+            let totalSpacing = edgeSpacing + imageWidth / 2
+//            print(position)
+            
+            if position.x > 80 && position.x < screenWidth - 80 {
+                logoImageView.frame.origin.x = position.x - imageWidth / 2
+            }
+            if position.y < screenHeight - 80 && position.y > 80 {
+                logoImageView.frame.origin.y = position.y - imageHeight / 2
+            }
         }
     }
-    
 
 }

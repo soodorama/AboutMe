@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YDG-0y-pb9">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--TitleVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TitleVC" id="BYZ-38-t0r" customClass="TitleVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,13 +116,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="Z5z-OO-Juh" kind="show" identifier="ToMichiganSegue" id="QaE-CR-chd"/>
+                        <segue destination="Z5z-OO-Juh" kind="show" identifier="ToMichiganSegue" animates="NO" id="QaE-CR-chd"/>
                         <segue destination="KeJ-6i-MK4" kind="presentation" identifier="ToContactSegue" id="FDn-gg-36H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346.37681159420293" y="112.5"/>
+            <point key="canvasLocation" x="-330" y="113"/>
         </scene>
         <!--ContactVC-->
         <scene sceneID="hhI-tt-5DT">
@@ -188,12 +188,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BX-Ti-oaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97.101449275362327" y="837.72321428571422"/>
+            <point key="canvasLocation" x="-257" y="751"/>
+        </scene>
+        <!--Michigan InfoVC-->
+        <scene sceneID="cXg-P3-GPR">
+            <objects>
+                <viewController id="d2V-ov-JND" customClass="MichiganInfoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hv7-TX-dAK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.78385019302368164" blue="0.00233073765411973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bG7-tH-AIb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbJ-Sy-5sW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="751"/>
+        </scene>
+        <!--Main PageVC-->
+        <scene sceneID="kYi-ym-SD8">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="YDG-0y-pb9" customClass="MainPageVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I87-an-Egc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="-599"/>
         </scene>
         <!--MichiganVC-->
         <scene sceneID="8DV-tH-UiJ">
             <objects>
-                <viewController id="Z5z-OO-Juh" customClass="MichiganVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MichiganVC" id="Z5z-OO-Juh" customClass="MichiganVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qy6-fY-kRT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +267,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="iWk-1k-FKv" firstAttribute="bottom" secondItem="PAb-Ai-E72" secondAttribute="bottom" constant="8" id="44X-8q-F3Q"/>
                             <constraint firstItem="iWk-1k-FKv" firstAttribute="trailing" secondItem="A7R-fl-1th" secondAttribute="trailing" id="C19-qG-27I"/>
                             <constraint firstItem="PAb-Ai-E72" firstAttribute="centerX" secondItem="qy6-fY-kRT" secondAttribute="centerX" id="DYa-7R-4G5"/>
                             <constraint firstItem="10n-CZ-2rU" firstAttribute="centerX" secondItem="qy6-fY-kRT" secondAttribute="centerX" id="Eb3-Xc-tSS"/>
@@ -252,7 +276,6 @@
                             <constraint firstItem="vtv-Qo-aEu" firstAttribute="centerY" secondItem="qy6-fY-kRT" secondAttribute="centerY" id="W0a-1N-273"/>
                             <constraint firstItem="10n-CZ-2rU" firstAttribute="centerY" secondItem="qy6-fY-kRT" secondAttribute="centerY" id="Z8E-Hg-JTn"/>
                             <constraint firstItem="iWk-1k-FKv" firstAttribute="bottom" secondItem="A7R-fl-1th" secondAttribute="bottom" id="Zce-Ti-aZ2"/>
-                            <constraint firstItem="PAb-Ai-E72" firstAttribute="top" secondItem="3ib-6m-Jew" secondAttribute="bottom" constant="108.5" id="etP-Eh-cOC"/>
                             <constraint firstItem="A7R-fl-1th" firstAttribute="top" secondItem="iWk-1k-FKv" secondAttribute="top" id="fWM-2R-60h"/>
                             <constraint firstAttribute="trailing" secondItem="quK-7j-t6S" secondAttribute="trailing" constant="8" id="iA3-a6-rCP"/>
                             <constraint firstItem="quK-7j-t6S" firstAttribute="centerY" secondItem="qy6-fY-kRT" secondAttribute="centerY" id="k6D-xf-K85"/>
@@ -271,22 +294,30 @@
                         <outlet property="rightArrowImageView" destination="quK-7j-t6S" id="czQ-XE-AnC"/>
                         <outlet property="topLabel" destination="pdF-pu-F5Z" id="haT-x0-8mp"/>
                         <segue destination="4dz-Cd-0Tc" kind="show" identifier="ToPlanning2GoSegue" id="QIF-pr-TL6"/>
+                        <segue destination="d2V-ov-JND" kind="presentation" identifier="ToMichiganInfoVC" id="PJv-N6-010"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30J-HQ-U7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="113"/>
+            <point key="canvasLocation" x="274" y="113"/>
         </scene>
         <!--Planning2GoVC-->
         <scene sceneID="Ar1-Rg-mvQ">
             <objects>
-                <viewController id="4dz-Cd-0Tc" userLabel="Planning2GoVC" customClass="Planning2GoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Planning2GoVC" id="4dz-Cd-0Tc" userLabel="Planning2GoVC" customClass="Planning2GoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="88c-uP-kT5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maize_yellow_p2g_green" translatesAutoresizingMaskIntoConstraints="NO" id="yWK-Wh-GwX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ptg_logo_maize_border" translatesAutoresizingMaskIntoConstraints="NO" id="zjY-pV-3RS">
+                                <rect key="frame" x="79" y="320" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="7Td-ev-5HQ"/>
+                                    <constraint firstAttribute="width" constant="256" id="7xc-1f-H2L"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChL-JQ-HG1">
                                 <rect key="frame" x="152" y="190.5" width="110" height="57.5"/>
@@ -299,13 +330,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="4xy-wq-c3l"/>
                                     <constraint firstAttribute="height" constant="30" id="MUf-As-J9g"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ptg_logo_maize_border" translatesAutoresizingMaskIntoConstraints="NO" id="zjY-pV-3RS">
-                                <rect key="frame" x="79" y="320" width="256" height="256"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="7Td-ev-5HQ"/>
-                                    <constraint firstAttribute="width" constant="256" id="7xc-1f-H2L"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_left_blue_um" translatesAutoresizingMaskIntoConstraints="NO" id="vaL-QF-wyl">
@@ -341,7 +365,7 @@
                             <constraint firstItem="ToA-us-Lgz" firstAttribute="centerX" secondItem="88c-uP-kT5" secondAttribute="centerX" id="OSc-J5-X0I"/>
                             <constraint firstItem="7kd-Ss-0gJ" firstAttribute="trailing" secondItem="esF-Ts-HxI" secondAttribute="trailing" constant="8" id="UzB-2T-GS7"/>
                             <constraint firstItem="vaL-QF-wyl" firstAttribute="centerY" secondItem="88c-uP-kT5" secondAttribute="centerY" id="jDi-DR-lLT"/>
-                            <constraint firstItem="ToA-us-Lgz" firstAttribute="top" secondItem="rHO-jM-1UV" secondAttribute="bottom" constant="108.5" id="nkD-B0-0hb"/>
+                            <constraint firstItem="7kd-Ss-0gJ" firstAttribute="bottom" secondItem="ToA-us-Lgz" secondAttribute="bottom" constant="8" id="mnf-uk-WQS"/>
                             <constraint firstItem="rHO-jM-1UV" firstAttribute="top" secondItem="zjY-pV-3RS" secondAttribute="bottom" constant="72" id="rOi-LN-n2a"/>
                             <constraint firstItem="7kd-Ss-0gJ" firstAttribute="trailing" secondItem="yWK-Wh-GwX" secondAttribute="trailing" id="vgJ-VE-M8L"/>
                             <constraint firstItem="vaL-QF-wyl" firstAttribute="leading" secondItem="88c-uP-kT5" secondAttribute="leading" constant="8" id="wHO-zT-j9Z"/>
@@ -351,17 +375,18 @@
                         <viewLayoutGuide key="safeArea" id="7kd-Ss-0gJ"/>
                     </view>
                     <connections>
+                        <outlet property="logoImageView" destination="zjY-pV-3RS" id="qVO-en-ENI"/>
                         <segue destination="y5e-TH-MgB" kind="show" identifier="ToCodingDojoSegue" id="vp1-Ig-C4M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjs-kC-irm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="113"/>
+            <point key="canvasLocation" x="877" y="113"/>
         </scene>
         <!--CodingDojoVC-->
         <scene sceneID="UGD-k4-TrI">
             <objects>
-                <viewController id="y5e-TH-MgB" userLabel="CodingDojoVC" customClass="CodingDojoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodingDojoVC" id="y5e-TH-MgB" userLabel="CodingDojoVC" customClass="CodingDojoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MsD-vm-ReX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,7 +441,7 @@
                             <constraint firstItem="cXx-tr-msY" firstAttribute="centerY" secondItem="MsD-vm-ReX" secondAttribute="centerY" id="2O6-bl-FQk"/>
                             <constraint firstItem="JdU-lm-XuM" firstAttribute="leading" secondItem="MsD-vm-ReX" secondAttribute="leading" constant="8" id="6hQ-O6-7y7"/>
                             <constraint firstItem="PER-TE-fkU" firstAttribute="trailing" secondItem="cXx-tr-msY" secondAttribute="trailing" constant="8" id="81m-9e-4gV"/>
-                            <constraint firstItem="yfB-8H-vOV" firstAttribute="top" secondItem="fWg-Lh-bpE" secondAttribute="bottom" constant="108.5" id="AwT-Ts-VDY"/>
+                            <constraint firstItem="PER-TE-fkU" firstAttribute="bottom" secondItem="yfB-8H-vOV" secondAttribute="bottom" constant="8" id="8kn-Xc-CIr"/>
                             <constraint firstItem="SSO-gN-DeZ" firstAttribute="centerY" secondItem="MsD-vm-ReX" secondAttribute="centerY" id="FkR-qf-irV"/>
                             <constraint firstItem="JdU-lm-XuM" firstAttribute="centerY" secondItem="MsD-vm-ReX" secondAttribute="centerY" id="GAb-bu-aHR"/>
                             <constraint firstItem="PER-TE-fkU" firstAttribute="bottom" secondItem="4Vr-zx-HKC" secondAttribute="bottom" id="KFK-ih-ra8"/>
@@ -437,12 +462,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBm-pc-YFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="113"/>
+            <point key="canvasLocation" x="1475" y="113"/>
         </scene>
         <!--YelpVC-->
         <scene sceneID="lhI-mg-6I4">
             <objects>
-                <viewController id="8Y6-cc-8ZN" userLabel="YelpVC" customClass="YelpVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YelpVC" id="8Y6-cc-8ZN" userLabel="YelpVC" customClass="YelpVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8t-uU-yWu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,12 +543,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSG-qf-FPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3233" y="113"/>
+            <point key="canvasLocation" x="2065" y="113"/>
         </scene>
         <!--MeVC-->
         <scene sceneID="F1x-8E-42q">
             <objects>
-                <viewController id="4P2-Cx-fVn" userLabel="MeVC" customClass="CodingDojoVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeVC" id="4P2-Cx-fVn" userLabel="MeVC" customClass="MeVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c96-IM-6y8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -609,7 +634,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNe-c5-8mJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qox-0g-Fhw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4117" y="113"/>
+            <point key="canvasLocation" x="2658" y="113"/>
         </scene>
     </scenes>
     <resources>

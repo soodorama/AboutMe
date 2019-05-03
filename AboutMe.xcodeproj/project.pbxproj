@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E06E0C8227C1759002834F1 /* MichiganInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06E0C7227C1759002834F1 /* MichiganInfoVC.swift */; };
+		8E06E0CA227D06F9002834F1 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06E0C9227D06F9002834F1 /* MainPageVC.swift */; };
 		8E0B65E9227AC10C00087808 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B65E8227AC10C00087808 /* ContactVC.swift */; };
 		8E259EAF227A558500713CD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E259EAE227A558500713CD7 /* AppDelegate.swift */; };
-		8E259EB1227A558500713CD7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E259EB0227A558500713CD7 /* MainVC.swift */; };
+		8E259EB1227A558500713CD7 /* TitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E259EB0227A558500713CD7 /* TitleVC.swift */; };
 		8E259EB4227A558500713CD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E259EB2227A558500713CD7 /* Main.storyboard */; };
 		8E259EB7227A558500713CD7 /* AboutMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E259EB5227A558500713CD7 /* AboutMe.xcdatamodeld */; };
 		8E259EB9227A558600713CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E259EB8227A558600713CD7 /* Assets.xcassets */; };
@@ -41,10 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E06E0C7227C1759002834F1 /* MichiganInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MichiganInfoVC.swift; sourceTree = "<group>"; };
+		8E06E0C9227D06F9002834F1 /* MainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		8E0B65E8227AC10C00087808 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		8E259EAB227A558500713CD7 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E259EAE227A558500713CD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E259EB0227A558500713CD7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		8E259EB0227A558500713CD7 /* TitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleVC.swift; sourceTree = "<group>"; };
 		8E259EB3227A558500713CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E259EB6227A558500713CD7 /* AboutMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AboutMe.xcdatamodel; sourceTree = "<group>"; };
 		8E259EB8227A558600713CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,15 +115,17 @@
 		8E259EAD227A558500713CD7 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				8E259EAE227A558500713CD7 /* AppDelegate.swift */,
-				8E259EDF227A6A4D00713CD7 /* MichiganVC.swift */,
-				8E259EB0227A558500713CD7 /* MainVC.swift */,
 				8E259EB2227A558500713CD7 /* Main.storyboard */,
+				8E06E0C9227D06F9002834F1 /* MainPageVC.swift */,
+				8E259EB0227A558500713CD7 /* TitleVC.swift */,
 				8E0B65E8227AC10C00087808 /* ContactVC.swift */,
-				8ED3B07D227A9BE100C954BF /* MeVC.swift */,
-				8ED3B07B227A965800C954BF /* YelpVC.swift */,
-				8E259EE3227A833A00713CD7 /* CodingDojoVC.swift */,
+				8E259EDF227A6A4D00713CD7 /* MichiganVC.swift */,
+				8E06E0C7227C1759002834F1 /* MichiganInfoVC.swift */,
 				8E259EE1227A79EA00713CD7 /* Planning2GoVC.swift */,
+				8E259EE3227A833A00713CD7 /* CodingDojoVC.swift */,
+				8ED3B07B227A965800C954BF /* YelpVC.swift */,
+				8ED3B07D227A9BE100C954BF /* MeVC.swift */,
+				8E259EAE227A558500713CD7 /* AppDelegate.swift */,
 				8E259EB8227A558600713CD7 /* Assets.xcassets */,
 				8E259EBA227A558600713CD7 /* LaunchScreen.storyboard */,
 				8E259EBD227A558600713CD7 /* Info.plist */,
@@ -281,8 +287,10 @@
 				8ED3B07E227A9BE100C954BF /* MeVC.swift in Sources */,
 				8E259EE0227A6A4D00713CD7 /* MichiganVC.swift in Sources */,
 				8E259EE2227A79EA00713CD7 /* Planning2GoVC.swift in Sources */,
+				8E06E0C8227C1759002834F1 /* MichiganInfoVC.swift in Sources */,
 				8E259EB7227A558500713CD7 /* AboutMe.xcdatamodeld in Sources */,
-				8E259EB1227A558500713CD7 /* MainVC.swift in Sources */,
+				8E06E0CA227D06F9002834F1 /* MainPageVC.swift in Sources */,
+				8E259EB1227A558500713CD7 /* TitleVC.swift in Sources */,
 				8E259EE4227A833A00713CD7 /* CodingDojoVC.swift in Sources */,
 				8E259EAF227A558500713CD7 /* AppDelegate.swift in Sources */,
 				8ED3B07C227A965800C954BF /* YelpVC.swift in Sources */,
