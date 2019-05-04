@@ -10,6 +10,8 @@ import UIKit
 
 class MainPageVC: UIPageViewController {
     
+     var pageControl = UIPageControl()
+    
     fileprivate lazy var pages: [UIViewController] = {
         return [
             self.getViewController(withIdentifier: "TitleVC"),
@@ -37,10 +39,19 @@ class MainPageVC: UIPageViewController {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
         
-        
+        configurePageControl()
     }
     
-    
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.minY + 50,width: UIScreen.main.bounds.width,height: 50))
+        self.pageControl.numberOfPages = pages.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.gray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.view.addSubview(pageControl)
+    }
 
 }
 
@@ -75,5 +86,8 @@ extension MainPageVC: UIPageViewControllerDataSource {
 
 
 extension MainPageVC: UIPageViewControllerDelegate {
-    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = pages.firstIndex(of: pageContentViewController)!
+    }
 }
